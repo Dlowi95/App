@@ -18,6 +18,7 @@ public class FirstController : Controller{
     [TempData]
     public string StatusMessage {get; set; }
 
+    [AcceptVerbs("POST", "GET")]
     public IActionResult ViewProduct(int? id){
         var product = _productService.Where(p => p.Id == id).FirstOrDefault();
         if(product == null){
