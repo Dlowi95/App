@@ -1,11 +1,17 @@
+using App.Data;
 using App.ExtendMethods;
 using App.Services;
 using Microsoft.AspNetCore.Routing.Constraints;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
+    new MySqlServerVersion(new Version(5, 7, 0))));
+
 builder.Services.AddSingleton<ProductService>();
 builder.Services.AddSingleton<PlanetService>();
 var app = builder.Build();
