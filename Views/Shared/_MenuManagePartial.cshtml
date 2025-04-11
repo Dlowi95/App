@@ -1,10 +1,13 @@
 <div class="dropdown">
-    <a href="#" class="btn btn-outline-danger dropdown-toggle" id="managedropdownmenu" data-toggle="dropdown">
+    <a href="#" class="btn btn-outline-danger dropdown-toggle" id="managedropdownmenu" data-bs-toggle="dropdown">
         Manage
     </a>
     <div class="dropdown-menu" aria-labelledby="managedropdownmenu">
-        <a class="dropdown-item" asp-action="Index" asp-asp-controller="DbManage" asp-area="Database">
+        <a class="dropdown-item" asp-action="Index" asp-controller="DbManage" asp-area="Database">
             Database
+        </a>
+        <a class="dropdown-item" asp-action="Index" asp-controller="Contact" asp-area="Contact">
+            Quản lý liên hệ
         </a>
     </div>
 </div>

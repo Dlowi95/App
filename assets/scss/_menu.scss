@@ -1,0 +1,23 @@
+.app-navbar{
+    background: rgba(0,0,0,0.8);
+    .text-dark {
+      color: aliceblue !important;
+      &:hover {
+        color: wheat !important;
+      }
+    }
+    .navbar-brand{
+      color: #a57dea;
+      &:hover {
+        color: rgb(213, 59, 227) !important;
+      }
+    }
+    .dropdown-toggle{
+      border-color: #a562ad;
+      color: #ae84b3;
+      &:hover {
+        background-color: aliceblue;
+      }
+      margin-right: 4rem;
+    }
+  }

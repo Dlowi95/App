@@ -1,4 +1,6 @@
 namespace App.Data;
+
+using App.Models.Contacts;
 using Microsoft.EntityFrameworkCore;
 
 public class AppDbContext : DbContext {
@@ -20,5 +22,7 @@ public class AppDbContext : DbContext {
         //     }
         // }
     }
+
+    public DbSet<Contact> Contacts { get; set; }
 
 }
